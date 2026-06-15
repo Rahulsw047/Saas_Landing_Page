@@ -180,10 +180,41 @@ body{
 }
 .mockup-chart{
     height: 120px;
-    background-color: rgba(255,255,255,0.2);
-    border: 1px dashed rgba(255,255,255,0.1);
+    background:linear-gradient(180deg,rgba(99,102,241,0.05) 0%,rgba(15,23,42,0.2) 100%);
+    border: 1px solid rgba(255,255,255,0.08);
     border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    position: relative;
+    overflow: hidden;
 }
+.mockup-chart::before{
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 40px;
+    height: 8px;
+    background-color: rgba(255,255,255,0.02);
+    border-radius: 4px;
+}
+.mockup-chart::after{
+    content: '';
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(90deg,
+        var(--color-primary) 0%, var(--color-primary) 15%, transparent 15%,
+        transparent 25%, var(--color-accent) 25%, var(--color-accent) 40%,transparent 40%,
+        transparent 50%, var(--color-primary) 50%, var(--color-primary) 65%, transparent 65%,
+        transparent 75%, rgba(255,255,255,0.1) 75%, rgba(255,255,255,0.1) 90%, transparent 90%);
+    background-size: 100% 100%;
+    border-radius: 4px;
+    opacity: 0.7;
+}
+
 .trusted-section{
     padding: 3rem 2rem;
     background-color: rgba(15,23,42,0.5);
